@@ -1,77 +1,69 @@
+.col,
+.nav-link,
+.row,
+h3 {
+  margin: 0;
+  padding: 0
+}
+
 .navbar {
   padding: 1rem 4rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .06), 0 2px 10px 0 rgba(0, 0, 0, .02)
 }
 
-.nav-link {
-  padding: 0px;
-}
-
-.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
-  color: black;
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link,
+a {
+  color: #000
 }
 
 .logo-container {
-  display: inline-flex;
+  display: inline-flex
 }
-
-a {
-  color: black;
+.profile-icon {
+  background: #d5deff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
 }
 
 p {
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 0px;
-}
-
-h3 {
-  margin: 0px;
-}
-
-.row,
-.col {
-  margin: 0px;
-  padding: 0px;
+  margin-bottom: 0
 }
 
 .square-box-container {
-  padding: 1rem 25%;
+  padding: 1rem 25%
 }
 
 .square-box,
 .square-box-active {
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: .5rem;
+  padding: .5rem;
   border-radius: 5px;
   width: 6rem;
+  cursor: pointer
 }
 
 .square-box {
   background-color: #d5deff;
-  color: #2e5bff;
+  color: #2e5bff
 }
 
 .square-box-active {
   background-color: #2e5bff;
-  color: #fff;
+  color: #fff
 }
-
-
-
-
 
 .left-nav,
 .right-nav {
-  padding: 1rem;
+  padding: 1rem
 }
 
-.right-nav {
-  border: 1px solid #d5deff;
-}
-
+.right-nav,
 .stepper-container {
-  border: 1px solid #d5deff;
+  border: 1px solid #d5deff
 }
 
 .step {
@@ -79,11 +71,11 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: cream;
+  background-color: cream
 }
 
 .v-stepper {
-  position: relative;
+  position: relative
 }
 
 .step .circle {
@@ -91,16 +83,16 @@ h3 {
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin-left: 0.7rem;
-  display: inline-block;
+  margin-left: .7rem;
+  display: inline-block
 }
 
 .step .icon {
   border-radius: 100%;
   width: 35px;
   height: 35px;
-  margin-left: 0rem;
-  display: inline-block;
+  margin-left: 0;
+  display: inline-block
 }
 
 .step .line {
@@ -108,36 +100,36 @@ h3 {
   left: 15px;
   height: 100%;
   position: absolute;
-  border-left: 2px dashed #000;
+  border-left: 2px dashed #000
 }
 
 .step.completed .circle {
   visibility: visible;
-  background-color: rgb(6, 150, 215);
-  border-color: rgb(6, 150, 215);
+  background-color: #0696d7;
+  border-color: #0696d7
 }
 
 .step.completed .line {
-  border-left: 2px dashed #000;
+  border-left: 2px dashed #000
 }
 
 .step.active .circle {
   visibility: visible;
-  border-color: rgb(6, 150, 215);
+  border-color: #0696d7
 }
 
 .step.empty .circle {
-  visibility: hidden;
+  visibility: hidden
 }
 
 .step.empty .line {
   top: 0;
-  height: 150%;
+  height: 150%
 }
 
 .step:last-child .line {
-  border-left: 3px solid white;
-  z-index: -1;
+  border-left: 3px solid #fff;
+  z-index: -1
 }
 
 .content.active {
@@ -145,8 +137,8 @@ h3 {
   display: inline-block;
   width: 100%;
   background: #e6ebff;
-  padding: 0.3rem;
-  color: #33ac2e;
+  padding: .3rem;
+  color: #33ac2e
 }
 
 .content {
@@ -154,46 +146,47 @@ h3 {
   display: inline-block;
   width: 100%;
   border: 1px solid #e6ebff;
-  padding: 0.5rem;
+  padding: .5rem
 }
 
 .date-time {
-  float: right;
+  float: right
 }
 
 .content p {
-  font-size: 12px;
+  font-size: 12px
+}
+
+table {
+  width: 400px
 }
 
 thead tr {
-  border: none;
+  border: none
 }
 
 tr {
   border: 1px solid #e6ebff;
+  cursor: pointer
 }
 
 tbody {
   display: block;
-  height: 330px;
-  overflow: auto;
+  height: 320px;
+  overflow: auto
 }
 
-thead,
-tbody tr {
+tbody tr,
+thead {
   display: table;
   width: 100%;
-  table-layout: fixed;
+  table-layout: fixed
 }
 
 thead {
   width: calc(100% - 1em)
 }
 
-table {
-  width: 400px;
-}
-
 .blank-table-row {
-  height: 0.3rem;
+  height: .3rem
 }

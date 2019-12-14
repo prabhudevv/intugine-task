@@ -50,6 +50,13 @@ class TopNavBar extends Component {
                                 Transporters
                             </MDBNavLink>
                         </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink className="waves-effect waves-light" to="#!">
+                                <div className="profile-icon">
+                                    <img src={require('../assets/profile.svg')} width="20px" height="auto" alt="profile-icon" />
+                                </div>
+                            </MDBNavLink>
+                        </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>
             </MDBNavbar>
