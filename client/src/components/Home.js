@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { MDBCol, MDBRow, MDBTable, MDBTableHead, MDBTableBody } from 'mdbreact';
-var ES6Promise = require('es6-promise');
-ES6Promise.polyfill();
 var axios = require('axios');
 class Home extends Component {
     constructor(props) {
@@ -25,11 +23,11 @@ class Home extends Component {
                 return response
             })
             .catch(err => {
-                const res = {
+                const response = {
                     message: err.response.data.message,
                     status: err.response.status
                 }
-                return res;
+                return response;
             })
         const dataList = await apiData;
         dataList.data.data.map((list) => {

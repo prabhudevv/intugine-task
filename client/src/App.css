@@ -17,12 +17,15 @@ a {
   font-weight: 400;
 
 }
+
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
   color: #2e5bff;
 }
+
 .logo-container {
   display: inline-flex
 }
+
 .profile-icon {
   background: #d5deff;
   padding: 0.3rem 0.5rem;
@@ -193,4 +196,20 @@ thead {
 
 .blank-table-row {
   height: .3rem
+}
+
+#scrollbar-style::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background: #d5deff;
+}
+
+#scrollbar-style::-webkit-scrollbar-thumb {
+  background-color: #2e5bff;
+  height: 10rem;
+  border-radius: 15px;
+}
+
+#scrollbar-style::-webkit-scrollbar-thumb:window-inactive {
+  outline: 1px solid blue;
 }

@@ -5,7 +5,12 @@ import {
     MDBNavItem,
     MDBNavLink,
     MDBNavbarToggler,
-    MDBCollapse
+    MDBCollapse,
+    MDBDropdown,
+    MDBDropdownItem,
+    MDBDropdownMenu,
+    MDBDropdownToggle,
+    MDBIcon
 } from "mdbreact";
 
 class TopNavBar extends Component {
@@ -56,6 +61,16 @@ class TopNavBar extends Component {
                                     <img src={require('../assets/profile.svg')} width="20px" height="auto" alt="profile-icon" />
                                 </div>
                             </MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBDropdown>
+                                <MDBDropdownToggle nav caret>
+                                </MDBDropdownToggle>
+                                <MDBDropdownMenu className="dropdown-default">
+                                    <MDBDropdownItem href="#!">Change Password</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">Logout</MDBDropdownItem>
+                                </MDBDropdownMenu>
+                            </MDBDropdown>
                         </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>
