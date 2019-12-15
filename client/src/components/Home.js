@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { MDBCol, MDBRow, MDBTable, MDBTableHead, MDBTableBody } from 'mdbreact';
-import { services } from '../services/Services';
-
+var ES6Promise = require('es6-promise');
+ES6Promise.polyfill();
+var axios = require('axios');
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -12,11 +13,25 @@ class Home extends Component {
         }
     }
     async componentDidMount() {
-        const bearertoken = {
-            "email": "mayankmittal@intugine.com"
+        var apiData = {}, newDataList = {};
+        var bearerToken = {
+            headers: { 'Authorization': 'Bearer tTU3gFVUdP' }
+        };
+        var bodyParameters = {
+            email: "mayankmittal@intugine.com"
         }
-        const dataList = await services.dataList(bearertoken);
-        const newDataList = {};
+        apiData = axios.post('https://93870v1pgk.execute-api.ap-south-1.amazonaws.com/latest/shipments/mayank', bodyParameters, bearerToken)
+            .then(response => {
+                return response
+            })
+            .catch(err => {
+                const res = {
+                    message: err.response.data.message,
+                    status: err.response.status
+                }
+                return res;
+            })
+        const dataList = await apiData;
         dataList.data.data.map((list) => {
             if (list.current_status_code in newDataList) {
                 newDataList[list.current_status_code].count++;

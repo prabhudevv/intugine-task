@@ -27,7 +27,7 @@ class TopNavBar extends Component {
                 <MDBNavLink to={{ pathname: `/` }}>
                     <img src={require('../assets/logo.svg')} width="40px" height="auto" alt="verefi-logo" />
                 </MDBNavLink>
-                <MDBNavLink to={{ pathname: `/kannadamovies`, state: { lang: "k" } }}>
+                <MDBNavLink to={{ pathname: `/`, state: { lang: "k" } }}>
                     Intugine
               </MDBNavLink>
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
